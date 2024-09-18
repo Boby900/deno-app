@@ -1,8 +1,11 @@
-export function add(a: number, b: number): number {
-  return a + b;
+function capitalize(word: string): string {
+  return word.charAt(0).toUpperCase() + word.slice(1);
 }
 
-// Learn more at https://docs.deno.com/runtime/manual/examples/module_metadata#concepts
-if (import.meta.main) {
-  console.log("Add 2 + 3 =", add(2, 3));
+function hello(name: string): string {
+  return "Hello " + capitalize(name);
 }
+
+console.log(hello("john"));
+console.log(hello("Sarah"));
+console.log(hello("kai"));
